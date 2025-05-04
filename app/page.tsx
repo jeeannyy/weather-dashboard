@@ -10,6 +10,8 @@ export default function HomePage() {
 
 	const [city, setCity] = useState('');
 
+	const [error, setError] = useState(null);
+
 	const handleButton = () => {
 		router.push(`/weather/${city}`);
 	};

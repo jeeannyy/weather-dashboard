@@ -1,5 +1,6 @@
 import React from 'react';
 import { getWeather } from '../../../lib/getWeather';
+import { WeatherData } from '../../../types/weather';
 
 export default async function WeatherPage({
 	params,
@@ -21,7 +22,7 @@ export default async function WeatherPage({
 			<img src={iconUrl} alt='weather icon' width={80} height={80} />
 			<h4>{weather.weather[0].main}</h4>
 			<h4>{weather.weather[0].description}</h4>
-			<h4>{weather.weather[0].visibility}</h4>
+			<h4>{weather.visibility}</h4>
 			<h4>{weather.main.feels_like}°C</h4>
 		</>
 	);

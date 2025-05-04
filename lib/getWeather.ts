@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { WeatherData } from '../types/weather';
 
-export const getWeather = async (city: string) => {
+export const getWeather = async (city: string): Promise<WeatherData> => {
 	const response = await axios.get(
 		`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.WEATHER_API_KEY}`,
 		{ headers: { 'Cache-Control': 'no-store' } },
